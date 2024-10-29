@@ -75,7 +75,8 @@ graph TD
     D --> I
 
 ```
-</diagram>
+
+</details>
 
 ## CICD Implementations
 
