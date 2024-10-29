@@ -1,5 +1,21 @@
+# Local
+__pycache__/
+.idea
+.vscode
+.DS_Store
+.terraform
+
 # Local .terraform directories
 **/.terraform/*
+
+# Idea Directories
+.idea/
+
+# Terraform lock file
+ .terraform.lock.hcl
+
+# Env Files
+terraform.tfvars
 
 # .tfstate files
 *.tfstate
@@ -22,9 +38,6 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
-
-# Ignore transient lock info files created by terraform apply
-.terraform.tfstate.lock.info
 
 # Include override files you do wish to add to version control using negated pattern
 # !example_override.tf

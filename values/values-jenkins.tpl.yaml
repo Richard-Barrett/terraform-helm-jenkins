@@ -1,0 +1,13 @@
+---
+controller:
+  adminUser: "${admin_user}"
+  adminPassword: "${admin_password}" # Injected securely via Terraform
+
+persistence:
+  enabled: true
+  storageClass: "standard" # Update based on your Kubernetes storage class
+  size: 8Gi
+
+serviceType: LoadBalancer
+
+# Additional Jenkins configurations can be added here
