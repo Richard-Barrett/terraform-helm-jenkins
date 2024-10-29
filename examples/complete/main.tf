@@ -40,7 +40,6 @@ module "jenkins_dev" {
   name             = "jenkins-dev"
   repository       = "https://charts.jenkins.io"
   chart            = "jenkins"
-  version          = "3.10.1"
   namespace        = "jenkins-dev"
   create_namespace = true
 
