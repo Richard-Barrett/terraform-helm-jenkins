@@ -27,8 +27,8 @@ resource "helm_release" "jenkins" {
   name       = var.name
   repository = var.repository
   chart      = var.chart
-  namespace  = var.namespace
-  version    = var.version
+  namespace  = var.chart_namespace
+  version    = var.chart_version
 
   # Merge module's secure values with user-provided values
   # Default Values will be deployed via ./values/values-jenkins.tpl.yaml from within the module

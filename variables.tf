@@ -16,13 +16,13 @@ variable "chart" {
   default     = "jenkins"
 }
 
-variable "version" {
+variable "chart_version" {
   description = "The version of the Helm chart to deploy."
   type        = string
   default     = "3.10.1" # Update to the desired chart version
 }
 
-variable "namespace" {
+variable "chart_namespace" {
   description = "The Kubernetes namespace to deploy the Helm release into."
   type        = string
   default     = "jenkins"
