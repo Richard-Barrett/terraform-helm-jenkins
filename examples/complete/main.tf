@@ -35,7 +35,7 @@ resource "random_password" "jenkins_password" {
 }
 
 module "jenkins_dev" {
-  source = "../../" # Adjust the path as needed
+  source = "../.." # Adjust the path as needed
 
   name             = "jenkins-dev"
   repository       = "https://charts.jenkins.io"
