@@ -46,7 +46,7 @@ module "jenkins_dev" {
   # Inject sensitive data using templatefile
   values = concat(
     [
-      templatefile("${path.module}/values/values-jenkins.tpl.yaml", {
+      templatefile("${path.module}/../../values/values-jenkins.tpl.yaml", {
         admin_user     = "admin"
         admin_password = random_password.jenkins_password.result
       })
