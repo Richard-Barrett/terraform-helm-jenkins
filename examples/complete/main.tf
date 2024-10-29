@@ -35,7 +35,7 @@ resource "random_password" "jenkins_password" {
 }
 
 module "jenkins_dev" {
-  source = "../../modules/terraform-jenkins" # Adjust the path as needed
+  source = "../../" # Adjust the path as needed
 
   name             = "jenkins-dev"
   repository       = "https://charts.jenkins.io"
@@ -52,7 +52,6 @@ module "jenkins_dev" {
         admin_password = random_password.jenkins_password.result
       })
     ],
-    var.values
   )
 
   timeout = 600
