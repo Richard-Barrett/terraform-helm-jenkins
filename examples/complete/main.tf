@@ -40,7 +40,7 @@ module "jenkins_dev" {
   name             = "jenkins-dev"
   repository       = "https://charts.jenkins.io"
   chart            = "jenkins"
-  namespace        = "jenkins-dev"
+  chart_namespace        = "jenkins-dev"
   create_namespace = true
 
   # Inject sensitive data using templatefile

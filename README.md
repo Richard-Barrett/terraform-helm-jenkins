@@ -104,7 +104,7 @@ WARNINGS:
 
 ### Environment Variables Examples
 
-- i. Using terraform.tfvars
+#### Using terraform.tfvars
 
 Create a terraform.tfvars file in your environment directory to provide values.
 
@@ -123,7 +123,7 @@ gitignore file
 terraform.tfvars
 ```
 
-- ii. Using Environment Variables
+#### Using Environment Variables
 
 Terraform automatically picks up variables prefixed with TF_VAR_. You can set them in your shell session.
 
@@ -134,13 +134,15 @@ export TF_VAR_jenkins_admin_password="SuperSecurePassword!@#"
 
 - **Security Note**: Be cautious as environment variables can be exposed through process listings or shell histories. Prefer using environment variables in secure, ephemeral sessions.
 
-- iii. Using a Separate Variables File
+#### Using a Separate Variables File
 
 Alternatively, use a separate variables file and pass it explicitly during Terraform commands.
 
 ```bash
 terraform apply -var-file="secure-variables.tfvars"
 secure-variables.tfvars:
+```
+Or
 
 ```hcl
 jenkins_admin_user     = "devadmin"
