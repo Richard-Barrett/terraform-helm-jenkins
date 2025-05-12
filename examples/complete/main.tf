@@ -11,7 +11,7 @@ terraform {
       version = ">= 2.0.0"
     }
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.6.3"
     }
   }
@@ -30,8 +30,8 @@ provider "helm" {
 provider "random" {}
 
 resource "random_password" "jenkins_password" {
-  length           = 16
-  special          = true
+  length  = 16
+  special = true
 }
 
 module "jenkins_dev" {
@@ -40,7 +40,7 @@ module "jenkins_dev" {
   name             = "jenkins-dev"
   repository       = "https://charts.jenkins.io"
   chart            = "jenkins"
-  chart_namespace        = "jenkins-dev"
+  chart_namespace  = "jenkins-dev"
   create_namespace = true
 
   # Inject sensitive data using templatefile
